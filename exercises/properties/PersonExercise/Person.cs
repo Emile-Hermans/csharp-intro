@@ -1,6 +1,10 @@
-    using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Solution
+namespace PersonExercise
 {
     public class Person
     {
@@ -16,10 +20,13 @@ namespace Solution
 
         public string Name
         {
-            get { return name; }
-            set
+            get
             {
-                if ( string.IsNullOrWhiteSpace(value) )
+                return name;
+            }
+            set
+            {   
+                if (string.IsNullOrWhiteSpace(value) )
                 {
                     throw new ArgumentException();
                 }
@@ -35,7 +42,7 @@ namespace Solution
             get { return age; }
             set
             {
-                if ( value < 0 )
+                if(value < 0)
                 {
                     throw new ArgumentException();
                 }
